@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Grupo Sincro</title>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.1/firebase-storage.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <link rel="stylesheet" href="css/estilos2.css">
+    <link rel="stylesheet" href="css/estilos3.css">
+    <link href="css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/estilo.css">
+    <script src="javascript/main.js"></script>
+    <script src="javascript/GestionUsuario.js"></script>
+    <script src="javascript/productos.js"></script>
+    <script src="javascript/clientes.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="librerias/jspdf.min.js"></script>
+    <script src="javascript/crearPdf.js"></script>
+    <script src="javascript/contable.js"></script>
+    <script src="javascript/numeroMil.js"></script>
+
+</head>
+
+<body>
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+            <div class="sidebar-heading"><a onclick="inicio()" id="logo" href="">
+                    <div>Grupo Sincro</div>
+                </a></div>
+            <div class="list-group list-group-flush " id="accciones">
+
+                <a class="list-group-item list-group-item-action bg-light" href="#!">no tiene acciones disponibles</a>
+
+
+            </div>
+        </div>
+        <!-- Page Content-->
+        <div id="page-content-wrapper">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom" id="menuEncima">
+                <button class="btn btn-primary" id="menu-toggle">Menú</button>
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+
+                        <li class="nav-item"><a onclick="cerrarS()" class="nav-link" href="#!">Cerrar Sesión</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+            <center>
+                <div class="container-fluid">
+
+                    <div id="main">
+
+                    </div>
+
+
+                    <div class="login-page" id="login-page">
+                    </div>
+
+                </div>
+            </center>
+        </div>
+    </div>
+
+
+
+    <!-- Bootstrap core JS-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="javascript/scripts.js"></script>
+    <script src="javascript/menu.js"></script>
+    <script>/*
+    const producto = (id) => db.collection("productos").doc(id).get();
+    function Eliminar() {
+        db.collection("ventas").where("NumeroFactura", "==", 1672).get().then((querySnapshot) => {
+            querySnapshot.forEach(async (doc1) => {
+                var datos1 = doc1.data();
+                var cantidades = datos1.cantidades;
+                var idProducto = datos1.idProducto;
+                for (let i = 0; i < idProducto.length; i++) {
+                    var doc = await producto(idProducto[i]);
+                    console.log(idProducto[i],doc)
+                    var datos = doc.data();
+                    var CODIGO = datos.CODIGO;
+                    var DESCRIPCION = datos.DESCRIPCION;
+                    var STOCK = datos.STOCK;
+                    var LIMITE_INFERIOR = datos.LIMITE_INFERIOR;
+                    var PRECIO_VENTA = datos.PRECIO_VENTA;
+                    var VOLUMEN_GANANCIA = datos.VOLUMEN_GANANCIA;
+                    var PRECIO_COMPRA = datos.PRECIO_COMPRA;
+                    var registradoPor = datos.registradoPor;
+                    var PORCENTAJE = datos.PORCENTAJE;
+                    var CATEGORIA = datos.CATEGORIA;
+                    var urlProfile = datos.urlProfile;
+                    STOCK = STOCK + cantidades[i];
+                    db.collection("productos").doc(doc.id).set({
+                        CODIGO,
+                        DESCRIPCION,
+                        PRECIO_COMPRA,
+                        PRECIO_VENTA,
+                        STOCK,
+                        CATEGORIA,
+                        LIMITE_INFERIOR,
+                        registradoPor,
+                        VOLUMEN_GANANCIA,
+                        PORCENTAJE,
+                        urlProfile
+                    })
+                }
+                db.collection("ventas").doc(doc1.id).delete();
+            });
+            
+        })
+    }*/
+   
+        
+    </script>
+    <script>
+        
+    </script>
+</body>
+
+</html>
